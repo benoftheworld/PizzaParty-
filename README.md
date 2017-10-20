@@ -12,4 +12,17 @@ Gestionnaire de pizza Web Avancée
 ' Sudo chmod +x mongod '
 ' sudo chmod +x mongodRepair '
 
+#Lancer mongodb 
+- Ouvrir un nouveau terminal 
+- mongo 
+
+#Stocker les identifiants Git 
+- git add 
+- git commit -m ""
+- git pull 
+- git config credential.helper store 
+- git push 
+
+#Install mocha / express / body-parser / mongoose
+- npm install mocha 
 
