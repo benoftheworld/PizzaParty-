@@ -4,7 +4,7 @@
   "description": "gestionnaire de pizza front back ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha mainTest.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,12 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
     "express": "^4.16.2",
     "mocha": "^4.0.1",
     "mongoose": "^4.12.3"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5"
   }
 }

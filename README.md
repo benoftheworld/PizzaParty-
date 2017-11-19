@@ -1,4 +1,5 @@
-# PizzaParty-
+# PizzaParty - MARTIN Benjamin
+
 Gestionnaire de pizza Web Avancée 
 
 # To install the project 
