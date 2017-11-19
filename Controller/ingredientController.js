@@ -23,7 +23,9 @@ const router = express.Router();
 const ingredient = require('../Model/Ingredient');
 
 /**
- * Get all ingredients
+ * @function get
+ * @param {String} prend le chemin racine de l'api
+ * @description Permet de récuperer les informations de tous les Ingredients
  */ 
 router.get('/', (req, res, next) => {
     ingredient.find({}, (err, doc) =>{
@@ -33,7 +35,9 @@ router.get('/', (req, res, next) => {
 });
 
 /**
- * Get One ingredient by id
+ * @function get by id
+ * @param {String} prend le chemin racine de l'api + _id de l Ingredient
+ * @description Permet de récupérer les informations d'un Ingredient
  */ 
 router.get('/:id', (req, res) => {
     console.log(req.params);
@@ -49,8 +53,10 @@ router.get('/:id', (req, res) => {
 
 
 /**
- * Save one ingredient
- */ 
+ * @function post
+ * @param {String} prend le chemin racine de l'api
+ * @description Permet de save un ingredient
+ */
 router.post('/', (req, res) => {
     let newIngredient = new ingredient({ 
             name: req.body.name, 
@@ -66,7 +72,9 @@ router.post('/', (req, res) => {
 });
 
 /**
- * Update one ingredient by id
+ * @function put
+ * @param {String} prend le chemin racine de l'api + _id de l ingredient 
+ * @description Permet de mettre à jour un ingredient
  */ 
 router.put('/:id', (req, res) => {
     ingredient.findOneAndUpdate({_id: req.params.id}, {
@@ -82,7 +90,9 @@ router.put('/:id', (req, res) => {
 });
 
 /**
- * Delete one ingredient by id
+ * @function delete
+ * @param {String} prend le chemin racine de l'api _id de l ingredient 
+ * @description Permet de supprimer un ingredient 
  */ 
 router.delete('/:id', (req, res) => {
     ingredient.findOneAndRemove({_id : req.params.id}, (err,doc)=>{
